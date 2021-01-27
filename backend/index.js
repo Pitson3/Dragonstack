@@ -1,5 +1,17 @@
+//const GenerationEngine_1 = require("./engine.js");
 const Generation = require("./generation.js");
+const GenerationEngine = require("./engine.js");
 
+const engine = new GenerationEngine();
+
+engine.start();
+
+setTimeout(()=>{
+    engine.stop();
+},20000);
+
+
+/*
 const generation = new Generation();
 
 console.log(generation);
@@ -13,6 +25,14 @@ setTimeout(()=>{
 
     console.log("Mimar ", mimar)
 }, 15000);
+
+
+setTimeout(()=>{
+    const fooey = GenerationEngine.newDragon();
+
+    console.log("FOoey ", fooey)
+}, 2000)
+*/
 
 
 
