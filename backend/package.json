@@ -2,14 +2,18 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+  "homepage": "localhost:3003",
   "main": "index.js",
   "scripts": {
-    "start":"node .",
-    "dev": "nodemon ."
+    "start": "node ./bin/server.js PORT=3001",
+    "dev": "nodemon ./bin/server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }

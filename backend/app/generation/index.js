@@ -1,7 +1,7 @@
 
-const Dragon = require("./dragon.js") //Import Dragon class
+const Dragon = require("../dragon.js") //Import Dragon class
 
-const {REFRESH_RATE, SECONDS} = require("./config.js") //Import Config clas
+const {REFRESH_RATE, SECONDS} = require("../config.js") //Import Config clas
 
  const refreshRate = REFRESH_RATE * SECONDS;
 

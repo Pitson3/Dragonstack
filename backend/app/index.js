@@ -1,14 +1,34 @@
 //const GenerationEngine_1 = require("./engine.js");
-const Generation = require("./generation.js");
-const GenerationEngine = require("./engine.js");
+const express = require("express");
+
+const app = express();
+
+const dragonRouter = require("./api/dragon.js")
+const generationRouter = require("./api/generation")
+
+//const Generation = require("./generation/index.js");
+const GenerationEngine = require("./generation/engine.js");
 
 const engine = new GenerationEngine();
+//const port = 3000;
+
+app.locals.engine = engine; 
+
+app.use("/dragon", dragonRouter);
+app.use("/generation", generationRouter);
 
 engine.start();
+
+
+//app.listen("3000", ()=>{console.log("Listening on port 3000")});
+//app.listen(port, ()=>{console.log(`Listening on port ${port}`)});
 
 setTimeout(()=>{
     engine.stop();
 },20000);
+
+
+module.exports = app;
 
 
 /*
