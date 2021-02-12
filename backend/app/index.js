@@ -17,6 +17,18 @@ app.locals.engine = engine;
 app.use("/dragon", dragonRouter);
 app.use("/generation", generationRouter);
 
+
+//Practice Express
+app.get("/old", (req,res)=>res.send("Hello! Pitson. You are alive!"))
+
+app.get("/get", (req,res)=>res.send("The server got a get request!"));
+app.post("/post", (req,res)=>res.send("The server got a post request!"));
+app.put("/put", (req,res)=>res.send("The server got a put request!"));
+app.patch("/patch", (req,res)=>res.send("The server got a patch request!"));
+app.link("/link", (req,res)=>res.send("The server got a link request!"));
+app.delete("/delete", (req,res)=>res.send("The server got a delete request!"));
+
+
 engine.start();
 
 
