@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node ./bin/server.js PORT=3001",
     "dev": "nodemon ./bin/server.js",
-    "configure": "./bin/configure_db.sh"
+    "configure": "sh ./bin/configure_db.sh"
   },
   "author": "",
   "license": "ISC",
