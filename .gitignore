@@ -1,3 +1,6 @@
+#My app configs
+secrets
+
 # Logs
 logs
 *.log
