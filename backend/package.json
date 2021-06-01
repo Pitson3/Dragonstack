@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node ./bin/server.js PORT=3001",
     "dev": "nodemon ./bin/server.js",
+    "configure-dev" : "npm run configure && npm run dev",
     "configure": "sh ./bin/configure_db.sh"
   },
   "author": "",
